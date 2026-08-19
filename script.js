@@ -13,15 +13,21 @@ const interactiveSelector =
 
 document.documentElement.classList.add("js-ready");
 
-const getInteractiveItem = (target) => target.closest(interactiveSelector);
+const getInteractiveItem = (target) => {
+  if (!(target instanceof Element)) {
+    return null;
+  }
+
+  return target.closest(interactiveSelector);
+};
 
 document.addEventListener("pointerdown", (event) => {
   getInteractiveItem(event.target)?.classList.add("is-pressed");
-});
+}, { passive: true });
 
 document.addEventListener("pointerup", (event) => {
   getInteractiveItem(event.target)?.classList.remove("is-pressed");
-});
+}, { passive: true });
 
 document.addEventListener("pointercancel", () => {
   document
@@ -35,7 +41,7 @@ document.addEventListener("pointerout", (event) => {
   if (item && !item.contains(event.relatedTarget)) {
     item.classList.remove("is-pressed");
   }
-});
+}, { passive: true });
 
 document.addEventListener("keydown", (event) => {
   if (event.key !== " " && event.key !== "Enter") {
