@@ -353,6 +353,17 @@ a:focus-visible {
   object-fit: contain;
 }
 
+.link-card__icon-svg {
+  width: 26px;
+  height: 26px;
+
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
 .link-card__content {
   display: flex;
   min-width: 0;
