@@ -13,9 +13,15 @@
      Color
      ------------------------------------------------------------------------ */
 
-  --color-primary: #0066cc;
-  --color-primary-focus: #0071e3;
-  --color-primary-on-dark: #2997ff;
+  --color-brand-orange: #f8981b;
+  --color-brand-red: #dc302c;
+  --color-brand-orange-focus: #d97800;
+  --color-brand-orange-soft: #fff4e2;
+  --color-brand-red-soft: #fff0ef;
+
+  --color-primary: var(--color-brand-orange);
+  --color-primary-focus: var(--color-brand-orange-focus);
+  --color-primary-on-dark: var(--color-brand-orange);
 
   --color-ink: #1d1d1f;
   --color-body: #1d1d1f;
@@ -43,12 +49,10 @@
      ------------------------------------------------------------------------ */
 
   --font-display:
-    system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
-    sans-serif;
+    Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --font-text:
-    system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
-    sans-serif;
+    Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   /* ------------------------------------------------------------------------
      Radius
@@ -129,9 +133,9 @@ body {
   font-family: var(--font-text);
   font-size: 17px;
   font-weight: 400;
-  line-height: 1.47;
+  line-height: 1.5;
 
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -194,7 +198,7 @@ h3:last-child {
   border-radius: var(--radius-pill);
 
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
 
   transform: translateY(-200%);
 }
@@ -250,7 +254,7 @@ a:focus-visible {
   background: var(--color-canvas);
 
   border: 1px solid var(--color-hairline);
-  border-radius: 50%;
+  border-radius: 100%;
 }
 
 .profile__logo img {
@@ -270,10 +274,10 @@ a:focus-visible {
   color: var(--color-ink-muted-48);
 
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.29;
 
-  letter-spacing: -0.01em;
+  letter-spacing: 0.01em;
 }
 
 .profile__title {
@@ -282,11 +286,15 @@ a:focus-visible {
   color: var(--color-ink);
 
   font-family: var(--font-display);
-  font-size: clamp(2rem, 9vw, 2.75rem);
-  font-weight: 600;
-  line-height: 1.07;
+  font-size: clamp(2rem, 8.5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.04;
 
-  letter-spacing: -0.028em;
+  letter-spacing: -0.035em;
+}
+
+.profile__title b {
+  font-weight: 700;
 }
 
 .profile__tagline {
@@ -296,10 +304,10 @@ a:focus-visible {
 
   font-family: var(--font-display);
   font-size: 21px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.19;
 
-  letter-spacing: -0.012em;
+  letter-spacing: -0.018em;
 }
 
 .profile__description {
@@ -312,9 +320,9 @@ a:focus-visible {
 
   font-size: 17px;
   font-weight: 400;
-  line-height: 1.47;
+  line-height: 1.5;
 
-  letter-spacing: -0.01em;
+  letter-spacing: -0.004em;
 }
 
 /* ==========================================================================
@@ -332,10 +340,10 @@ a:focus-visible {
 
   font-family: var(--font-display);
   font-size: 21px;
-  font-weight: 600;
-  line-height: 1.19;
+  font-weight: 700;
+  line-height: 1.16;
 
-  letter-spacing: -0.012em;
+  letter-spacing: -0.022em;
 }
 
 /* ==========================================================================
@@ -356,12 +364,7 @@ a:focus-visible {
 .link-card {
   position: relative;
 
-  display: grid;
-
-  grid-template-columns:
-    44px
-    minmax(0, 1fr)
-    24px;
+  display: flex;
 
   align-items: center;
 
@@ -375,7 +378,7 @@ a:focus-visible {
   background: var(--color-canvas);
 
   border: 1px solid var(--color-hairline);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-pill);
 
   transition:
     transform var(--motion-fast) var(--ease-standard),
@@ -395,23 +398,25 @@ a:focus-visible {
   height: 44px;
 
   flex: none;
+  overflow: hidden;
 
-  color: var(--color-primary);
   background: var(--color-canvas-parchment);
 
-  border-radius: 50%;
+  border-radius: 100%;
+}
 
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1;
+.link-card__icon img {
+  width: 28px;
+  height: 28px;
 
-  letter-spacing: -0.01em;
+  object-fit: contain;
 }
 
 .link-card__content {
   display: flex;
   min-width: 0;
 
+  flex: 1 1 auto;
   flex-direction: column;
   justify-content: center;
 
@@ -424,10 +429,10 @@ a:focus-visible {
   color: inherit;
 
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.24;
 
-  letter-spacing: -0.015em;
+  letter-spacing: -0.012em;
 
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -442,7 +447,7 @@ a:focus-visible {
   font-weight: 400;
   line-height: 1.43;
 
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -456,9 +461,30 @@ a:focus-visible {
   height: 44px;
 
   color: var(--color-primary);
+}
 
-  font-size: 19px;
-  font-weight: 400;
+.link-card__arrow::before {
+  width: 8px;
+  height: 8px;
+
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+
+  content: "";
+  transform: rotate(45deg);
+}
+
+.link-card--disabled {
+  cursor: default;
+  opacity: 0.58;
+}
+
+.link-card--disabled:active {
+  transform: none;
+}
+
+.link-card--disabled .link-card__description {
+  color: var(--color-ink-muted-80);
 }
 
 /* ==========================================================================
@@ -471,16 +497,14 @@ a:focus-visible {
   color: var(--color-body-on-dark);
   background: var(--color-primary);
 
-  border-color: var(--color-primary);
+  border-color: var(--color-brand-red);
 
   border-radius: var(--radius-pill);
-
-  padding-inline: 14px 20px;
 }
 
 .link-card--primary .link-card__icon {
-  color: var(--color-primary);
-  background: var(--color-canvas);
+  background: var(--color-brand-orange-soft);
+  border: 1px solid rgba(248, 152, 27, 0.38);
 }
 
 .link-card--primary .link-card__description {
@@ -521,10 +545,10 @@ a:focus-visible {
   color: var(--color-primary-on-dark);
 
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.3;
 
-  letter-spacing: 0.02em;
+  letter-spacing: 0.06em;
 }
 
 .feature-card__title {
@@ -536,10 +560,10 @@ a:focus-visible {
 
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 7vw, 2rem);
-  font-weight: 600;
-  line-height: 1.12;
+  font-weight: 700;
+  line-height: 1.08;
 
-  letter-spacing: -0.025em;
+  letter-spacing: -0.035em;
 }
 
 .feature-card__description {
@@ -550,10 +574,10 @@ a:focus-visible {
   color: var(--color-body-muted);
 
   font-size: 17px;
-  font-weight: 400;
-  line-height: 1.47;
+  font-weight: 350;
+  line-height: 1.5;
 
-  letter-spacing: -0.01em;
+  letter-spacing: -0.004em;
 }
 
 .feature-card__action {
@@ -574,7 +598,7 @@ a:focus-visible {
   border-radius: var(--radius-pill);
 
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1;
 
   transition: transform var(--motion-fast) var(--ease-standard);
@@ -582,6 +606,16 @@ a:focus-visible {
 
 .feature-card__action:active {
   transform: scale(0.95);
+}
+
+.feature-card__action-icon {
+  width: 8px;
+  height: 8px;
+
+  border-top: 1.5px solid currentColor;
+  border-right: 1.5px solid currentColor;
+
+  transform: rotate(45deg);
 }
 
 /* ==========================================================================
@@ -607,10 +641,10 @@ a:focus-visible {
 
   font-family: var(--font-display);
   font-size: 24px;
-  font-weight: 600;
-  line-height: 1.15;
+  font-weight: 700;
+  line-height: 1.12;
 
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .about__text {
@@ -622,9 +656,9 @@ a:focus-visible {
 
   font-size: 17px;
   font-weight: 400;
-  line-height: 1.47;
+  line-height: 1.5;
 
-  letter-spacing: -0.01em;
+  letter-spacing: -0.004em;
 }
 
 /* ==========================================================================
@@ -655,10 +689,10 @@ a:focus-visible {
   color: var(--color-ink);
 
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.29;
 
-  letter-spacing: -0.01em;
+  letter-spacing: -0.004em;
 }
 
 .site-footer__tagline {
@@ -667,10 +701,10 @@ a:focus-visible {
   color: var(--color-ink-muted-48);
 
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 350;
   line-height: 1.45;
 
-  letter-spacing: -0.01em;
+  letter-spacing: 0.01em;
 }
 
 .site-footer__nav {
@@ -681,7 +715,7 @@ a:focus-visible {
 
   flex-wrap: wrap;
 
-  gap: 8px 20px;
+  gap: 8px 12px;
 
   margin-bottom: var(--space-xl);
 }
@@ -689,19 +723,47 @@ a:focus-visible {
 .site-footer__nav a {
   display: inline-flex;
 
+  width: 44px;
   min-height: 44px;
+  height: 44px;
 
   align-items: center;
+  justify-content: center;
+
+  padding: 0;
 
   color: var(--color-primary);
+  background: var(--color-brand-orange-soft);
 
+  border: 1px solid rgba(248, 152, 27, 0.28);
+  border-radius: var(--radius-pill);
+
+  flex: 0 0 44px;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.29;
+
+  transition:
+    transform var(--motion-fast) var(--ease-standard),
+    background-color var(--motion-fast) var(--ease-standard),
+    border-color var(--motion-fast) var(--ease-standard);
 }
 
 .site-footer__nav a:active {
-  opacity: 0.68;
+  transform: scale(0.95);
+}
+
+.site-footer__icon {
+  width: 18px;
+  height: 18px;
+
+  flex: none;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
 }
 
 .site-footer__copyright {
@@ -713,7 +775,7 @@ a:focus-visible {
   font-weight: 400;
   line-height: 1.4;
 
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 /* ==========================================================================
@@ -750,11 +812,6 @@ a:focus-visible {
   }
 
   .link-card {
-    grid-template-columns:
-      42px
-      minmax(0, 1fr)
-      20px;
-
     min-height: 68px;
 
     gap: 10px;
@@ -826,7 +883,10 @@ a:focus-visible {
   }
 
   .link-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(100%, 320px), 1fr)
+    );
 
     gap: 16px;
   }
@@ -837,18 +897,13 @@ a:focus-visible {
     padding: 14px 16px;
   }
 
-  /*
-   * Primary WhatsApp CTA tetap mengambil seluruh lebar
-   * agar hierarchy CTA utama tidak hilang saat grid menjadi 2 kolom.
-   */
   .link-card--primary {
     grid-column: 1 / -1;
   }
 
-  /*
-   * Jika sebuah section hanya memiliki dua link biasa,
-   * keduanya otomatis mengisi masing-masing satu kolom.
-   */
+  .link-card--primary + .link-card {
+    grid-column: 1 / -1;
+  }
 
   .feature-card {
     padding: 40px;
@@ -943,6 +998,11 @@ a:focus-visible {
   }
 
   .link-list {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(100%, 300px), 1fr)
+    );
+
     gap: 20px;
   }
 
@@ -1071,12 +1131,12 @@ a:focus-visible {
     color: #000000;
   }
 
-  a[aria-disabled="true"] {
-    cursor: not-allowed;
+  .link-card--disabled {
+    cursor: default;
     opacity: 0.45;
   }
 
-  a[aria-disabled="true"]:active {
+  .link-card--disabled:active {
     transform: none;
   }
 }
