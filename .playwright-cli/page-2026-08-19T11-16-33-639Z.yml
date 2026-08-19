@@ -1,0 +1,87 @@
+- generic [active] [ref=e1]:
+  - link "Lewati ke konten utama" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - main [ref=e3]:
+    - generic [ref=e4]:
+      - img "Logo MY BOWL by Dapur Sahabat" [ref=e6]
+      - heading "My Bowl by Dapur Sahabat" [level=1] [ref=e8]
+    - region [ref=e9]:
+      - heading "Pesan" [level=2] [ref=e10]
+      - generic [ref=e11]:
+        - link "Pesan MY BOWL melalui WhatsApp" [ref=e12] [cursor=pointer]:
+          - /url: https://wa.me/6288902906930
+          - generic [ref=e14]:
+            - strong [ref=e15]: Pesan via WhatsApp
+            - generic [ref=e16]: Pesan langsung ke Dapur Sahabat
+        - link "Lihat menu MY BOWL" [ref=e18] [cursor=pointer]:
+          - /url: https://drive.google.com/drive/folders/1kHMJ3g3uigH_BYB_AnJgoRGwdj8ZFZs9?usp=sharing
+          - generic [ref=e20]:
+            - strong [ref=e21]: Lihat Menu
+            - generic [ref=e22]: Buka daftar menu MY BOWL
+    - region [ref=e24]:
+      - heading "Pesan Online" [level=2] [ref=e25]
+      - generic [ref=e26]:
+        - generic [ref=e29]:
+          - strong [ref=e30]: GoFood
+          - generic [ref=e31]: Tautan segera tersedia
+        - generic [ref=e34]:
+          - strong [ref=e35]: GrabFood
+          - generic [ref=e36]: Tautan segera tersedia
+        - generic [ref=e39]:
+          - strong [ref=e40]: ShopeeFood
+          - generic [ref=e41]: Tautan segera tersedia
+    - region [ref=e42]:
+      - heading "Pesanan Event" [level=2] [ref=e43]
+      - article [ref=e44]:
+        - generic [ref=e45]:
+          - heading "Konsumsi praktis untuk berbagai kegiatan" [level=3] [ref=e46]
+          - paragraph [ref=e47]: Untuk seminar, workshop, rapat, kegiatan kampus, komunitas, gathering, hingga acara keluarga
+          - link "Tanyakan paket konsumsi event melalui WhatsApp" [ref=e48] [cursor=pointer]:
+            - /url: https://wa.me/6288902906930
+            - text: Tanya Paket Event
+    - region [ref=e50]:
+      - heading "Ikuti Kami" [level=2] [ref=e51]
+      - link "Instagram Dapur Sahabat" [ref=e53] [cursor=pointer]:
+        - /url: https://www.instagram.com/dapursahabat__
+        - generic [ref=e55]:
+          - strong [ref=e56]: Instagram
+          - generic [ref=e57]: Foto menu, promo, dan aktivitas terbaru
+    - region [ref=e59]:
+      - heading "Lokasi & Kontak" [level=2] [ref=e60]
+      - generic [ref=e61]:
+        - link "Lihat lokasi Dapur Sahabat di Google Maps" [ref=e62] [cursor=pointer]:
+          - /url: https://maps.app.goo.gl/cgDK9oEHrFG4eELp7
+          - generic [ref=e64]:
+            - strong [ref=e65]: Google Maps
+            - generic [ref=e66]: Lihat lokasi dan petunjuk arah
+        - link "Telepon Dapur Sahabat" [ref=e68] [cursor=pointer]:
+          - /url: tel:+6288902906930
+          - generic [ref=e70]:
+            - strong [ref=e71]: Telepon
+            - generic [ref=e72]: 0889 0290 6930
+        - link "Email Dapur Sahabat" [ref=e74] [cursor=pointer]:
+          - /url: mailto:dapursahabat2026@gmail.com
+          - generic [ref=e76]:
+            - strong [ref=e77]: Email
+            - generic [ref=e78]: dapursahabat2026@gmail.com
+    - region "Tentang Dapur Sahabat" [ref=e80]:
+      - heading "Tentang Dapur Sahabat" [level=2]
+      - paragraph [ref=e81]: Dapur Sahabat menghadirkan MY BOWL, sajian rice bowl dengan konsep praktis, mengenyangkan, dan kaya rasa. Dibuat untuk menemani kebutuhan makan sehari-hari maupun pesanan dalam jumlah besar.
+  - contentinfo [ref=e82]:
+    - generic [ref=e83]:
+      - paragraph [ref=e84]:
+        - strong [ref=e85]: MY BOWL by Dapur Sahabat
+      - paragraph [ref=e86]: "#KenyangHematDapurSahabat"
+      - navigation "Tautan cepat" [ref=e87]:
+        - link "WhatsApp Dapur Sahabat" [ref=e88] [cursor=pointer]:
+          - /url: https://wa.me/6288902906930
+        - link "Instagram Dapur Sahabat" [ref=e92] [cursor=pointer]:
+          - /url: https://www.instagram.com/dapursahabat__
+        - link "Menu MY BOWL" [ref=e96] [cursor=pointer]:
+          - /url: https://drive.google.com/drive/folders/1kHMJ3g3uigH_BYB_AnJgoRGwdj8ZFZs9?usp=sharing
+        - link "Lokasi Dapur Sahabat" [ref=e98] [cursor=pointer]:
+          - /url: https://maps.app.goo.gl/cgDK9oEHrFG4eELp7
+        - link "Email Dapur Sahabat" [ref=e102] [cursor=pointer]:
+          - /url: mailto:dapursahabat2026@gmail.com
+      - paragraph [ref=e106]:
+        - generic [ref=e107]: © 2026 Dapur Sahabat. All rights reserved.
