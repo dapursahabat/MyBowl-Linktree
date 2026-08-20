@@ -1,7 +1,7 @@
 My Bowl by Dapur Sahabat
 
 homepage: https://linktreemybowl.vercel.app/
-menu: https://linktreemybowl.vercel.app/menu/
+menu: https://linktreemybowl.vercel.app/menu.html
 whatsapp: https://wa.me/6288902906930
 grabfood: https://food.grab.com/id/id/restaurant/my-bowl-by-dapur-sahabat-kandang-gampang-delivery/6-C8BELK4BLPCFA2
 instagram: https://www.instagram.com/dapursahabat__

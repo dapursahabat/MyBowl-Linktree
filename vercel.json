@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/menu",
-      "destination": "/menu/index.html"
+      "destination": "/menu.html"
     },
     {
       "source": "/menu/",
-      "destination": "/menu/index.html"
+      "destination": "/menu.html"
     }
   ],
   "headers": [
