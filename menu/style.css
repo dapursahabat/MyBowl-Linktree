@@ -64,6 +64,9 @@ img {
 
 .menu-card {
   padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(88, 62, 44, 0.14);
+  border-radius: 12px;
   content-visibility: auto;
   contain-intrinsic-size: 1200px 1600px;
 }
